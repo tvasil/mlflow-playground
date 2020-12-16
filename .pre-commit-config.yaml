@@ -1,0 +1,18 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-added-large-files
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: requirements-txt-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
+    rev: stable
+    hooks:
+    -   id: black
+        args: [--target-version=py38, --line-length=110]
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.6.4
+    hooks:
+    -   id: isort
